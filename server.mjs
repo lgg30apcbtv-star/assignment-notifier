@@ -21,4 +21,5 @@ const server = createServer(async (request, response) => {
   }
 });
 const port = Number(process.env.PORT || 4173);
-server.listen(port, '0.0.0.0', () => console.log(`과제알림 is running at http://localhost:${port}`));
+const host = process.env.HOST || '127.0.0.1';
+server.listen(port, host, () => console.log(`과제알림 is running at http://localhost:${port}`));
